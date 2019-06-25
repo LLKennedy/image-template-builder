@@ -1,0 +1,62 @@
+{
+  "name": "image-template-builder",
+  "description": "An electron app for visual construction and rendering of JSON templates defined by github.com/LLKennedy/imagetemplate.",
+  "author": "Luke Kennedy",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "imagetemplate-web": "^0.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "release": "npm run build && electron-builder --publish=always",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.electron.imagetemplate",
+    "productName": "Image Template Builder",
+    "copyright": "Copyright @ 2019 Luke Kennedy",
+    "files": [
+      "build/**/*",
+      "public/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "icon": "assets/logo_white.png"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/logo_white.ico"
+    }
+  },
+  "main": "public/electron.js",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.5",
+    "electron-builder": "^20.44.4",
+    "react-scripts": "3.0.1"
+  }
+}
