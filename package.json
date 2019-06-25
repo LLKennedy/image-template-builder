@@ -14,12 +14,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
-    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "build": {
     "appId": "com.electron.imagetemplate",
     "productName": "Image Template Builder",
     "copyright": "Copyright @ 2019 Luke Kennedy",
+    "mac": {
+      "icon": "assets/logo_white.png"
+    },
     "win": {
       "target": "portable",
       "icon": "assets/logo_white.ico"
@@ -42,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "react-scripts": "3.0.1",
-    "electron": "^5.0.5"
+    "electron": "^5.0.5",
+    "electron-builder": "^20.44.4",
+    "react-scripts": "3.0.1"
   }
 }
