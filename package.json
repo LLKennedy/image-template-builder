@@ -12,7 +12,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "electron": "electron .",
     "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
