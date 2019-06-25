@@ -16,6 +16,15 @@
     "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
+  "build": {
+    "appId": "com.electron.imagetemplate",
+    "productName": "Image Template Builder",
+    "copyright": "Copyright @ 2019 Luke Kennedy",
+    "win": {
+      "target": "portable",
+      "icon": "assets/logo_white.ico"
+    }
+  },
   "main": "src/electron-starter.js",
   "eslintConfig": {
     "extends": "react-app"
