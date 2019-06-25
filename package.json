@@ -2,6 +2,7 @@
   "name": "image-template-builder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,7 +12,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "electron": "electron ."
+    "electron": "electron .",
+    "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
   "main": "src/electron-starter.js",
   "eslintConfig": {
