@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "babel-jest": "^24.8.0",
+    "coveralls": "^3.0.4",
     "electron": "^5.0.5",
     "electron-builder": "^20.44.4",
     "react-scripts": "3.0.1",
@@ -29,7 +30,8 @@
     "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
     "release": "npm run build && electron-builder --publish=always",
-    "dist": "npm run build && electron-builder"
+    "dist": "npm run build && electron-builder",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "build": {
     "extends": null,
