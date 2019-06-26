@@ -31,7 +31,7 @@
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
     "release": "npm run build && electron-builder --publish=always",
     "dist": "npm run build && electron-builder",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "npm run test --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "build": {
     "extends": null,
