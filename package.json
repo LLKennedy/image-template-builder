@@ -31,7 +31,7 @@
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
     "release": "npm run build && electron-builder --publish=always",
     "dist": "npm run build && electron-builder",
-    "coveralls": "CI=true && react-scripts test --all --coverage --no-watch --no-watchman && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "react-scripts test --all --coverage --no-watch --no-watchman && cat ./tests/coverage/lcov.info | coveralls"
   },
   "build": {
     "extends": null,
