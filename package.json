@@ -26,12 +26,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --all --coverage --no-watchman",
+    "test": "set CI=true && react-scripts test --all --coverage",
     "electron-dev-windows": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
     "release": "npm run build && electron-builder --publish=always",
     "dist": "npm run build && electron-builder",
-    "coveralls": "react-scripts test --all --coverage --no-watch --no-watchman && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "react-scripts test --all --coverage --no-watch && cat ./coverage/lcov.info | coveralls"
   },
   "build": {
     "extends": null,
