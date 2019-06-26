@@ -14,7 +14,11 @@
 !*.md
 !*.ps1
 
+# special stuff
+!*.yml
+
 # re-ignores
 node_modules/
 build/
 dist/
+coverage/
